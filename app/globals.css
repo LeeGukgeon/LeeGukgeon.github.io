@@ -1,5 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
+body {
+  font-family: "Merriweather", serif;
+}
 
 @custom-variant dark (&:is(.dark *));
 
@@ -123,40 +127,56 @@
 
 /* 5. 복잡한 3D 효과 */
 .cube-container {
-    perspective: 1000px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
 }
 
 .cube {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    transform-style: preserve-3d;
-    animation: rotateCube 12s infinite linear;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateCube 12s infinite linear;
 }
 
 .cube-face {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
 }
 
-.cube-front { transform: translateZ(50px); }
-.cube-back { transform: rotateY(180deg) translateZ(50px); }
-.cube-right { transform: rotateY(90deg) translateZ(50px); }
-.cube-left { transform: rotateY(-90deg) translateZ(50px); }
-.cube-top {  transform: rotateX(90deg) translateZ(50px); }
-.cube-bottom { transform: rotateX(-90deg) translateZ(50px); }
+.cube-front {
+  transform: translateZ(50px);
+}
+.cube-back {
+  transform: rotateY(180deg) translateZ(50px);
+}
+.cube-right {
+  transform: rotateY(90deg) translateZ(50px);
+}
+.cube-left {
+  transform: rotateY(-90deg) translateZ(50px);
+}
+.cube-top {
+  transform: rotateX(90deg) translateZ(50px);
+}
+.cube-bottom {
+  transform: rotateX(-90deg) translateZ(50px);
+}
 
 @keyframes rotateCube {
-    0% { transform: rotateX(0deg) rotateY(0deg); }
-    100% { transform: rotateX(720deg) rotateY(360deg); }
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(720deg) rotateY(360deg);
+  }
 }
