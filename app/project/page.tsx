@@ -14,6 +14,8 @@ export default function Home() {
                 src="/poss_img.png"
                 alt="POSS_project_image"
                 fill
+                sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw"
+                priority
                 className="object-cover"
               />
             </div>
@@ -45,6 +47,8 @@ export default function Home() {
                 src="/thewater_img.png"
                 alt="POSS_project_image"
                 fill
+                sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw"
+                priority
                 className="object-cover"
               />
             </div>
@@ -76,6 +80,8 @@ export default function Home() {
                 src="/bgs_img.png"
                 alt="POSS_project_image"
                 fill
+                sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw"
+                priority
                 className="object-cover"
               />
             </div>

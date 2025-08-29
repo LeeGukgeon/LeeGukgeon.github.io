@@ -4,7 +4,7 @@ export default function AboutPage() {
   return (
     <div className="max-w-3xl mx-auto my-8">
       <header className="flex items-center justify-between gap-4">
-        <h1 className="min-w-[200px]">
+        <h1 className="min-w-[200px] font-medium">
           수학을 전공한 풀스택 개발자 이국건입니다
           <br />
           일단 개인블로그는 하나 있어야 할 것 같아서 만들었습니다
