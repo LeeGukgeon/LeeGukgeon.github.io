@@ -7,8 +7,7 @@ interface Props {
   params: { slug: string };
 }
 export default async function BlogDetail({ params }: Props) {
-  const param = await params;
-  const post = getPostBySlug(param.slug);
+  const post = getPostBySlug(params.slug);
   if (!post) return <div>글을 찾을 수 없습니다.</div>;
   return (
     <div className="prose lg:prose-xl max-w-3xl mx-auto my-20">
