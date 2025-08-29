@@ -13,7 +13,6 @@ export default async function BlogDetail({ params }: Props) {
   return (
     <div className="prose lg:prose-xl max-w-3xl mx-auto my-20">
       <ReactMarkdown
-        children={post.content}
         remarkPlugins={[remarkMath, remarkGfm]}
         rehypePlugins={[rehypeKatex]}
         components={{
@@ -24,7 +23,9 @@ export default async function BlogDetail({ params }: Props) {
             <h1 className="text-5xl font-bold" {...props} />
           ),
         }}
-      />
+      >
+        {post.content}
+      </ReactMarkdown>
       <div className="prose lg:prose-xl">
         <h1>My Blog Post Title</h1>
         <p>This is some content.</p>
