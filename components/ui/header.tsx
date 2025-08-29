@@ -6,7 +6,7 @@ export default function Header() {
       <nav>
         <div className="flex justify-between gap-4 m-6 max-w-3xl mx-auto">
           <Link className="ml-4 text-lg font-bold" href="/">
-            Gukgeon's Vibeblog
+            Gukgeon&apos;s Vibeblog
           </Link>
           <div className="flex gap-4">
             {/* <Link href="/">Posts</Link> */}

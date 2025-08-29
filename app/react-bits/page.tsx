@@ -9,16 +9,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import SplitText from "@/components/TextAnimations/SplitText/SplitText";
-import CircularText from "@/components/TextAnimations/CircularText/CircularText";
-import TextType from "@/components/TextAnimations/TextType/TextType";
-import TextPressure from "@/components/TextAnimations/TextPressure/TextPressure";
-import FuzzyText from "@/components/TextAnimations/FuzzyText/FuzzyText";
-import FallingText from "@/components/TextAnimations/FallingText/FallingText";
-import DecryptedText from "@/components/TextAnimations/DecryptedText/DecryptedText";
-import ASCIIText from "@/components/TextAnimations/ASCIIText/ASCIIText";
-import VariableProximity from "@/components/TextAnimations/VariableProximity/VariableProximity";
-import CountUp from "@/components/TextAnimations/CountUp/CountUp";
+// import SplitText from "@/components/TextAnimations/SplitText/SplitText";
+// import CircularText from "@/components/TextAnimations/CircularText/CircularText";
+// import TextType from "@/components/TextAnimations/TextType/TextType";
+// import TextPressure from "@/components/TextAnimations/TextPressure/TextPressure";
+// import FuzzyText from "@/components/TextAnimations/FuzzyText/FuzzyText";
+// import FallingText from "@/components/TextAnimations/FallingText/FallingText";
+// import DecryptedText from "@/components/TextAnimations/DecryptedText/DecryptedText";
+// import ASCIIText from "@/components/TextAnimations/ASCIIText/ASCIIText";
+// import VariableProximity from "@/components/TextAnimations/VariableProximity/VariableProximity";
+// import CountUp from "@/components/TextAnimations/CountUp/CountUp";
 
 export default function Home() {
   const [showAscii, setShowAscii] = useState(false);
