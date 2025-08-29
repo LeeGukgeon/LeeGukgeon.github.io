@@ -51,7 +51,7 @@ function map(
   start: number,
   stop: number,
   start2: number,
-  stop2: number,
+  stop2: number
 ) {
   return ((n - start) / (stop - start)) * (stop2 - start2) + start2;
 }
@@ -85,7 +85,7 @@ class AsciiFilter {
 
   constructor(
     renderer: THREE.WebGLRenderer,
-    { fontSize, fontFamily, charset, invert }: AsciiFilterOptions = {},
+    { fontSize, fontFamily, charset, invert }: AsciiFilterOptions = {}
   ) {
     this.renderer = renderer;
     this.domElement = document.createElement("div");
@@ -135,7 +135,7 @@ class AsciiFilter {
       const charWidth = this.context.measureText("A").width;
 
       this.cols = Math.floor(
-        this.width / (this.fontSize * (charWidth / this.fontSize)),
+        this.width / (this.fontSize * (charWidth / this.fontSize))
       );
       this.rows = Math.floor(this.height / this.fontSize);
 
@@ -246,7 +246,7 @@ class CanvasTxt {
       fontSize = 200,
       fontFamily = "Arial",
       color = "#fdf9f3",
-    }: CanvasTxtOptions = {},
+    }: CanvasTxtOptions = {}
   ) {
     this.canvas = document.createElement("canvas");
     this.context = this.canvas.getContext("2d");
@@ -266,7 +266,7 @@ class CanvasTxt {
       const textWidth = Math.ceil(metrics.width) + 20;
       const textHeight =
         Math.ceil(
-          metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent,
+          metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent
         ) + 20;
 
       this.canvas.width = textWidth;
@@ -343,7 +343,7 @@ class CanvAscii {
     }: CanvAsciiOptions,
     containerElem: HTMLElement,
     width: number,
-    height: number,
+    height: number
   ) {
     this.textString = text;
     this.asciiFontSize = asciiFontSize;
@@ -359,7 +359,7 @@ class CanvAscii {
       45,
       this.width / this.height,
       1,
-      1000,
+      1000
     );
     this.camera.position.z = 30;
 
@@ -559,14 +559,14 @@ export default function ASCIIText({
               },
               containerRef.current!,
               w,
-              h,
+              h
             );
             asciiRef.current.load();
 
             observer.disconnect();
           }
         },
-        { threshold: 0.1 },
+        { threshold: 0.1 }
       );
 
       observer.observe(containerRef.current);
@@ -590,7 +590,7 @@ export default function ASCIIText({
       },
       containerRef.current,
       width,
-      height,
+      height
     );
     asciiRef.current.load();
 
@@ -623,7 +623,7 @@ export default function ASCIIText({
       ref={containerRef}
       className="ascii-text-container"
       style={{
-        position: "absolute",
+        position: "relative",
         width: "100%",
         height: "100%",
       }}

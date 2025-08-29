@@ -1,0 +1,47 @@
+/* 5. 복잡한 3D 효과 */
+.cube-container {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0;
+}
+
+.cube {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateCube 12s infinite linear;
+}
+
+.cube-face {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+.cube-back {
+  transform: rotateY(180deg);
+}
+.cube-right {
+  transform: rotateY(90deg);
+}
+.cube-left {
+  transform: rotateY(-90deg);
+}
+.cube-top {
+  transform: rotateX(90deg);
+}
+.cube-bottom {
+  transform: rotateX(-90deg);
+}
+
+@keyframes rotateCube {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(720deg) rotateY(360deg);
+  }
+}

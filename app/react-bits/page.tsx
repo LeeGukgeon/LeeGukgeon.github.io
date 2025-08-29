@@ -1,4 +1,5 @@
 "use client";
+import { useState, useRef } from "react";
 import {
   Card,
   CardAction,
@@ -15,8 +16,14 @@ import TextPressure from "@/components/TextAnimations/TextPressure/TextPressure"
 import FuzzyText from "@/components/TextAnimations/FuzzyText/FuzzyText";
 import FallingText from "@/components/TextAnimations/FallingText/FallingText";
 import DecryptedText from "@/components/TextAnimations/DecryptedText/DecryptedText";
+import ASCIIText from "@/components/TextAnimations/ASCIIText/ASCIIText";
+import VariableProximity from "@/components/TextAnimations/VariableProximity/VariableProximity";
+import CountUp from "@/components/TextAnimations/CountUp/CountUp";
 
 export default function Home() {
+  const [showAscii, setShowAscii] = useState(false);
+  const containerRef = useRef(null);
+  console.log(containerRef);
   return (
     <div className="max-w-[1000px] mx-auto">
       <h1 className="text-center text-2xl font-bold p-10">React-Bits</h1>
@@ -144,6 +151,69 @@ export default function Home() {
               sequential={true}
             />
           </CardContent>
+        </Card>
+        <Card className="w-64 h-80">
+          <CardHeader>
+            <CardTitle
+              onClick={() => setShowAscii((prev) => !prev)}
+              className="cursor-pointer select-none"
+            >
+              Ascii Text
+            </CardTitle>
+          </CardHeader>
+          {showAscii && (
+            <ASCIIText
+              text="apocalypse"
+              enableWaves={false}
+              asciiFontSize={5}
+              textFontSize={20}
+              planeBaseHeight={10}
+            />
+          )}
+        </Card>
+        <Card className="w-64 h-80">
+          <CardHeader>
+            <CardTitle>Variable Proximity</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div
+              ref={containerRef}
+              style={{ position: "relative", height: "150px" }}
+            >
+              <VariableProximity
+                label={
+                  "Hover me! And then star React Bits on GitHub, or else..."
+                }
+                className={"variable-proximity-demo"}
+                fromFontVariationSettings="'wght' 400, 'opsz' 9"
+                toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                containerRef={containerRef}
+                radius={50}
+                falloff="gaussian"
+              />
+            </div>
+          </CardContent>
+        </Card>
+        <Card className="w-64 h-80">
+          <CardHeader>
+            <CardTitle>Count Up</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CountUp
+              from={0}
+              to={100}
+              separator=","
+              direction="up"
+              duration={1}
+              className="count-up-text text-xl font-bold"
+            />
+          </CardContent>
+        </Card>
+        <Card className="w-64 h-80">
+          <CardHeader>
+            <CardTitle>Card Title</CardTitle>
+          </CardHeader>
+          <CardContent></CardContent>
         </Card>
         <Card className="w-64 h-80">
           <CardHeader>
