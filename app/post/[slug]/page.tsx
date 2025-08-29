@@ -1,4 +1,4 @@
-import { getPostBySlug } from "@/lib/markdown";
+import { getPostBySlug, getAllPosts } from "@/lib/markdown";
 import ReactMarkdown from "react-markdown";
 import remarkMath from "remark-math";
 import remarkGfm from "remark-gfm";
@@ -6,6 +6,14 @@ import rehypeKatex from "rehype-katex";
 
 interface Props {
   params: Promise<{ slug: string }>; // Promise로 변경
+}
+
+export async function generateStaticParams() {
+  const posts = getAllPosts(); // 모든 포스트 가져오기
+
+  return posts.map((post) => ({
+    slug: post.slug, // 각 포스트의 slug 반환
+  }));
 }
 
 export default async function BlogDetail({ params }: Props) {
