@@ -3,12 +3,17 @@ import ReactMarkdown from "react-markdown";
 import remarkMath from "remark-math";
 import remarkGfm from "remark-gfm";
 import rehypeKatex from "rehype-katex";
+
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>; // Promise로 변경
 }
+
 export default async function BlogDetail({ params }: Props) {
-  const post = getPostBySlug(params.slug);
+  const { slug } = await params; // await로 Promise 해결
+  const post = getPostBySlug(slug);
+
   if (!post) return <div>글을 찾을 수 없습니다.</div>;
+
   return (
     <div className="prose lg:prose-xl max-w-3xl mx-auto my-20">
       <ReactMarkdown
