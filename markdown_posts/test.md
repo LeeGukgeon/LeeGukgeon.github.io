@@ -37,5 +37,5 @@ console.log(hello("Next.js"));
 ![주사위면](/dice1.png)
 
 $$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
+\Gamma(z) = \int^\infty t^{z-1}e^{-t}dt\,
 $$
