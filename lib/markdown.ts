@@ -6,7 +6,7 @@ const postsDir = path.join(process.cwd(), "markdown_posts");
 
 export function getAllPosts() {
   const files = fs.readdirSync(postsDir);
-  return files.map((file) => {
+  const posts = files.map((file) => {
     const slug = file.replace(/\.md$/, "");
     const content = fs.readFileSync(path.join(postsDir, file), "utf-8");
     const { data } = matter(content);
@@ -14,9 +14,12 @@ export function getAllPosts() {
     return {
       slug,
       title: data.title ?? "",
+      date: data.date ?? null,
+      emoji: data.emoji ?? "📄",
       ...data,
     };
   });
+  return posts.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 export function getPostBySlug(slug: string) {
   const filePath = path.join(postsDir, `${slug}.md`);

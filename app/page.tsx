@@ -12,10 +12,9 @@ export default function Home() {
           <li key={post.slug}>
             <Link href={`/post/${post.slug}`}>
               <div className="flex items-center space-x-3 p-2">
-                <span className="text-xl">📄</span>
-                <div>
-                  <p className="font-medium">{post.title}</p>
-                </div>
+                <span className="text-xl">{post.emoji}</span>
+                <p className="font-medium">{post.title}</p>
+                <span className="text-sm text-gray-500">{post.date}</span>
               </div>
             </Link>
           </li>

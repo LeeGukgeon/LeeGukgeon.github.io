@@ -1,3 +1,18 @@
+---
+emoji: "☕"
+title: "개인 블로그에 후원 버튼 만들기"
+date: "2025-09-10"
+tags: []
+summary: ""
+---
+
+# 내 블로그에 후원 버튼 만들기
+
+[Hexo 블로그에 카카오페이 후원버튼 삽입하기](https://youngjinmo.github.io/2020/03/hexo-donation-card/)
+
+위 블로그를 참고해서 후원 버튼을 만들어봐야겠다
+
+```
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -61,3 +76,7 @@ export default function AboutPage() {
     </div>
   );
 }
+
+```
+
+![buymeacoffeeimg](http://leegukgeon.github.io/buymeacoffee1.png)

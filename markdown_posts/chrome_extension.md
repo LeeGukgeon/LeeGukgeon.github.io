@@ -1,10 +1,12 @@
 ---
+emoji: "⚙️"
 title: "30분만에 크롬 확장 프로그램 만들기"
-date: "2025-08-29"
-author: "국건"
+date: "2025-02-26"
 tags: ["Chrome", "extension"]
 summary: "크롬 확장 프로그램을 만들어보기"
 ---
+
+# 30분만에 크롬 확장 프로그램 만들기
 
 ![](https://velog.velcdn.com/images/lkukun/post/b080f5f7-25db-40ac-af94-128eef48c260/image.png)
 내가 만든(gpt와 함께 만든) Page Summary Popup 크롬 확장 프로그램
